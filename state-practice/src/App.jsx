@@ -6,9 +6,14 @@ function App() {
 
   let nameField = <span>Name</span>;
 
-  if (isEdited) {
-    nameField = <input type="text" required />
+  function handleButtonClick() {
+    if (isEdited) {
+      setIsEdited(false);
+    } else {
+      setIsEdited(true);
+    }
   }
+
 
   return (
     <>
@@ -16,7 +21,9 @@ function App() {
         <h3>Registration</h3>
         <div>
           {nameField}
-          <button onClick={() => setIsEdited(true)}>{isEdited ? 'Save' : 'Edit'}</button>
+          <button onClick={handleButtonClick}>
+            {isEdited ? "Save" : "Edit"}
+          </button>
         </div>
       </div>
     </>
