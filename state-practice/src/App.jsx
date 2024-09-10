@@ -4,12 +4,8 @@ import "./App.css";
 function App() {
   return (
     <>
-      <div>
-        <h3>Registration From</h3>
-        <div>
-          <User />
-        </div>
-      </div>
+      <h3>Registration</h3>
+      <User />
     </>
   );
 }
