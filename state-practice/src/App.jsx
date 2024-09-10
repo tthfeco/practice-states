@@ -16,7 +16,7 @@ function App() {
         <h3>Registration</h3>
         <div>
           {nameField}
-          <button onClick={() => setIsEdited(true)}>Edit</button>
+          <button onClick={() => setIsEdited(true)}>{isEdited ? 'Save' : 'Edit'}</button>
         </div>
       </div>
     </>
