@@ -3,8 +3,13 @@ import "./App.css";
 
 function App() {
   const [isEdited, setIsEdited] = useState(false);
+  const [name, setName] = useState("Name");
 
-  let nameField = <span>Name</span>;
+  let nameField = <span>{name}</span>;
+
+  if (isEdited) {
+    nameField = <input type='text' value={name} onChange={(e) => setName(e.target.value)} />;
+  }
 
   function handleButtonClick() {
     if (isEdited) {
@@ -13,7 +18,6 @@ function App() {
       setIsEdited(true);
     }
   }
-
 
   return (
     <>
